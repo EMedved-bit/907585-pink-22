@@ -31,22 +31,34 @@
     </header>
     <main class="page-main">
       <section class="main-header">
-        <h1 class="page-title main-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="main-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </section>
+      <div class="page-info">
+        <div class="page-wrapper">
+          <p class="page-info__intro">
+            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          </p>
+        </div>
+      </div>
       <section class="сompetition-form">
         <h2 class="visually-hidden">Форма заявки для участия в конкурсе</h2>
         <div class="page-wrapper">
-          <p class="competition-form__intro">
-            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-          </p>
           <form class="competition-form__form" action="https://echo.htmlacademy.ru" method="GET">
             <fieldset class="competition-form__section">
-              <label class="competition-form__label" for="user-surname">Фамилия:</label>
-              <input class="competition-form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
-              <label class="competition-form__label" for="username">Имя:</label>
-              <input class="competition-form__input" type="text" name="username" id="username" placeholder="Введите ваше имя *" required>
-              <label class="competition-form__label" for="user-second-name">Отчество:</label>
-              <input class="competition-form__input" type="text" name="user-second-name" id="user-second-name" placeholder="Ну и отчество тоже">
+              <ul class="competition-form__fields-list">
+                <li class="competition-form__fields-item">
+                  <label class="competition-form__label" for="user-surname">Фамилия:</label>
+                  <input class="competition-form__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию *" required>
+                </li>
+                <li class="competition-form__fields-item">
+                  <label class="competition-form__label" for="username">Имя:</label>
+                  <input class="competition-form__input" type="text" name="username" id="username" placeholder="Введите ваше имя *" required>
+                </li>
+                <li class="competition-form__fields-item">
+                  <label class="competition-form__label" for="user-second-name">Отчество:</label>
+                  <input class="competition-form__input" type="text" name="user-second-name" id="user-second-name" placeholder="Ну и отчество тоже">
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="competition-form__section">
               <legend class="competition-form__name">Ваши безбашенные достижения в путешествии</legend>
@@ -78,10 +90,16 @@
               </ul>
             </fieldset>
             <fieldset class="competition-form__section">
-              <label class="competition-form__label" for="user-phone">Номер телефона</label>
-              <input class="competition-form__input" type="tel" name="user-phone" id="user-phone" placeholder="Номер, пожалуйста" pattern="[0-9]{3}-[0-9]{5}">
-              <label class="competition-form__label" for="user-email">Адрес почты</label>
-              <input class="competition-form__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required>
+              <ul class="competition-form__fields-list">
+                <li class="competition-form__fields-item">
+                  <label class="competition-form__label" for="user-phone">Номер телефона</label>
+                  <input class="competition-form__input" type="tel" name="user-phone" id="user-phone" placeholder="Номер, пожалуйста" pattern="[0-9]{3}-[0-9]{5}">
+                </li>
+                <li class="competition-form__fields-item">
+                  <label class="competition-form__label" for="user-email">Адрес почты</label>
+                  <input class="competition-form__input" type="email" name="user-email" id="user-email" placeholder="Введите почту *" required>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="competition-form__section">
               <legend class="competition-form__name">С каким приложением путешествовали?</legend>
@@ -102,9 +120,7 @@
             </fieldset>
             <fieldset class="competition-form__section">
               <legend class="competition-form__name">Опишите свои эмоции</legend>
-              <textarea name="comment" id="comment-field">
-                Можно прям в красках, не стесняясь в выражениях
-              </textarea>
+              <textarea name="comment" id="comment-field" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
             <div class="competition-form__footer">
               <button class="form-button competition-form__button" type="submit">Отправить форму</button>
