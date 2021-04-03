@@ -1,0 +1,77 @@
+.price-table {
+  border-collapse: collapse;
+
+  th:first-child,
+  td:first-child {
+    display: none;
+  }
+}
+
+.price-table__rate {
+  background-color: $dark-grey;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  width: 280px;
+  min-width: 280px;
+  height: 94px;
+  border-right: 2px solid $light-grey;
+
+  &:last-child {
+    border: none;
+    border-radius: 0 3px 0 0;
+  }
+
+  &:nth-child(2) {
+    border-radius: 3px 0 0 0;
+  }
+}
+
+.price-table__rate-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 9px;
+}
+
+.price-table__rate-price {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.price-table__cell {
+  background-color: $white;
+  height: 59px;
+  border-right: 2px solid $table-border;
+  border-bottom: 2px solid $table-border;
+  padding: 0 20px;
+
+  &:nth-child(2) {
+    border-left: 2px solid $table-border;
+  }
+}
+
+.price-table__value {
+  display: flex;
+  justify-content: space-between;
+
+  &--yes::after {
+    content: "";
+    background-image: url("../../img/icons/table-yes.svg");
+    display: inline-block;
+    width: 31px;
+    height: 21px;
+  }
+
+  &--no::after {
+    content: "";
+    background-image: url("../../img/icons/table-no.svg");
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.price__toggles {
+  margin-top: 45px;
+}

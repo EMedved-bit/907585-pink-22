@@ -1,0 +1,61 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  margin: 0 auto;
+}
+
+.main-button {
+  width: 280px;
+  height: 55px;
+  border: 3px solid $white;
+  border-radius: 29px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.slider-toggles {
+  display: flex;
+  width: 56px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.slider-toggles__button {
+  padding: 0;
+  border: 0;
+  width: 6px;
+  height: 6px;
+  background-color: rgba($dark-grey, 0.3);
+  border-radius: 50%;
+  font-size: 0;
+
+  &--current {
+    background-color: $white;
+    border: 3px solid $dark-grey;
+    box-sizing: content-box;
+  }
+}

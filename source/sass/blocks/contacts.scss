@@ -1,0 +1,40 @@
+.contacts__wrapper {
+  padding: 47px 20px 41px;
+}
+
+.contacts__intro {
+  margin-bottom: 40px;
+}
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__item {
+  text-align: center;
+}
+
+.contacts__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.contacts__link {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 24px;
+  color: $red;
+  line-height: 33px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.contacts__map {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
