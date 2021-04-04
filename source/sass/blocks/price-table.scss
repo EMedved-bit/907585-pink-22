@@ -57,7 +57,7 @@
 
   &--yes::after {
     content: "";
-    background-image: url("../../img/icons/table-yes.svg");
+    background-image: url("../img/icons/table-yes.svg");
     display: inline-block;
     width: 31px;
     height: 21px;
@@ -65,7 +65,7 @@
 
   &--no::after {
     content: "";
-    background-image: url("../../img/icons/table-no.svg");
+    background-image: url("../img/icons/table-no.svg");
     display: inline-block;
     width: 27px;
     height: 27px;

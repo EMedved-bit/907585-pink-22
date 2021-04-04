@@ -4,7 +4,7 @@
 }
 
 .download-section__intro {
-  background-image: url("../../img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 95px;
@@ -12,7 +12,7 @@
   &::after {
     content: "";
     display: block;
-    background-image: url("../../img/app-image.png");
+    background-image: url("../img/app-image.png");
     width: 320px;
     height: 286px;
     margin: 0 auto;
@@ -41,19 +41,19 @@
   display: block;
 
   &--apple {
-    background-image: url("../../img/icons/apple-logo.svg");
+    background-image: url("../img/icons/apple-logo.svg");
     width: 47px;
     height: 56px;
   }
 
   &--android {
-    background-image: url("../../img/icons/android-logo.svg");
+    background-image: url("../img/icons/android-logo.svg");
     width: 43px;
     height: 47px;
   }
 
   &--windows {
-    background-image: url("../../img/icons/microsoft-logo.svg");
+    background-image: url("../img/icons/microsoft-logo.svg");
     width: 44px;
     height: 41px;
   }
