@@ -42,12 +42,12 @@
 .price-table__cell {
   background-color: $white;
   height: 59px;
-  border-right: 2px solid $table-border;
-  border-bottom: 2px solid $table-border;
+  border-right: 2px solid $border;
+  border-bottom: 2px solid $border;
   padding: 0 20px;
 
   &:nth-child(2) {
-    border-left: 2px solid $table-border;
+    border-left: 2px solid $border;
   }
 }
 
@@ -57,7 +57,7 @@
 
   &--yes::after {
     content: "";
-    background-image: url("../../img/icons/table-yes.svg");
+    background-image: url("../img/icons/table-yes.svg");
     display: inline-block;
     width: 31px;
     height: 21px;
@@ -65,7 +65,7 @@
 
   &--no::after {
     content: "";
-    background-image: url("../../img/icons/table-no.svg");
+    background-image: url("../img/icons/table-no.svg");
     display: inline-block;
     width: 27px;
     height: 27px;
