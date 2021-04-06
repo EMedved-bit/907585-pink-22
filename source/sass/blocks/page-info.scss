@@ -1,5 +1,9 @@
 .page-info {
   padding: 48px 20px 0;
+
+  &--bottom {
+    padding-bottom: 44px;
+  }
 }
 
 .page-info__intro {

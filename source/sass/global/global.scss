@@ -34,6 +34,16 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  &--red {
+    border-color: $red;
+    color: $red;
+  }
+
+  &--disabled {
+    border-color: rgba($dark-grey, 0.1);
+    color: rgba($dark-grey, 0.1);
+  }
 }
 
 .slider-toggles {
@@ -72,4 +82,43 @@
   font-size: 18px;
   text-transform: uppercase;
   color: $white;
+}
+
+.filter-button {
+  border: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: contain;
+
+  path {
+    fill: $dark-grey;
+  }
+
+  &--active path {
+    fill: $red;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.range-controls {
+  position: relative;
+}
+
+.range-controls__scale {
+  height: 2px;
+  background-color: $dark-grey;
+}
+
+.range-controls__toogle {
+  width: 14px;
+  height: 14px;
+  background-color: $white;
+  border: 2px solid $red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
 }
