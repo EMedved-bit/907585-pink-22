@@ -1,6 +1,43 @@
 .download-section {
   width: 100%;
   background-color: $dark-blue;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/background-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 207px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/background-desktop.jpg");
+    padding-top: 219px;
+  }
+}
+
+.download-section__wrapper {
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      background-image: url("../img/app-image-tablet.png");
+      width: 660px;
+      height: 545px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+
+    &::before {
+      background-image: url("../img/app-image-desktop.png");
+      width: 1050px;
+      height: 645px;
+      left: 146px;
+    }
+  }
 }
 
 .download-section__intro {
@@ -8,6 +45,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 95px;
+  position: relative;
 
   &::after {
     content: "";
@@ -17,6 +55,20 @@
     height: 286px;
     margin: 0 auto;
     margin-top: 34px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    padding-top: 0;
+    width: 340px;
+
+    p {
+      padding: 0 50px;
+    }
   }
 }
 
@@ -24,6 +76,23 @@
   padding: 28px 20px 38px;
   width: 320px;
   margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 340px;
+    padding-top: 35px;
+    padding-bottom: 115px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 127px;
+  }
+}
+
+.download-section__link {
+  width: 100%;
 }
 
 .download-section__list {
@@ -34,6 +103,14 @@
 
   li:not(:last-child) {
     margin-right: 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 46px 0 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 67px 0 55px;
   }
 }
 
@@ -64,4 +141,8 @@
   font-weight: 300;
   color: $white;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }

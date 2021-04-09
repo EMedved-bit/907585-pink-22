@@ -8,6 +8,10 @@
 .social__item {
   margin-right: 14px;
 
+  @media (min-width: $desktop-width) {
+    margin-right: 7px;
+  }
+
   &:last-child {
     margin-right: 0;
   }

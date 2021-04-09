@@ -1,21 +1,13 @@
 .features {
   width: 100%;
-  padding-top: 46px;
-}
-
-.features__intro {
-  padding: 0 20px 70px;
-}
-
-.features__intro-text:not(:last-child) {
-  margin-bottom: 46px;
+  background-color: $light-grey;
 }
 
 .features__list {
   list-style: none;
   margin: 0;
-  padding: 53px 20px 0;
-  background-color: $light-grey;
+  padding: 53px 20px 6px;
+  position: relative;
 
   &::after {
     content: "";
@@ -26,10 +18,62 @@
     background-size: cover;
     margin: 0 auto;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 330px;
+
+    &::after {
+      background-image: url("../img/features-tablet.png");
+      width: 268px;
+      height: 482px;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 0 130px 50px;
+    justify-content: space-between;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .features__item {
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    width: 300px;
+
+    &::before {
+      content: "";
+      width: 300px;
+      height: 302px;
+      display: block;
+      margin-bottom: 59px;
+    }
+
+    &--first::before {
+      background-image: url("../img/features-desktop1.png");
+    }
+
+    &--second::before {
+      background-image: url("../img/features-desktop2.png");
+    }
+
+    &--third::before {
+      background-image: url("../img/features-desktop3.png");
+    }
+  }
 }
 
 .features__title {
@@ -38,9 +82,23 @@
   color: $black;
   margin: 0;
   margin-bottom: 24px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 29px;
+    padding: 0 24px;
+  }
 }
 
 .features__description {
   margin: 0;
   margin-bottom: 43px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 0 24px;
+  }
 }

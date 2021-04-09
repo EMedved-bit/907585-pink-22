@@ -3,8 +3,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 36px 20px 51px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 130px 87px;
+  }
 }
 
 .page-footer__social {
   margin: 38px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
