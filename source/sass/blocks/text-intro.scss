@@ -8,8 +8,36 @@
     color: $white;
   }
 
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+  }
+
   p {
     margin: 0;
     padding: 0 20px;
+  }
+
+  &--features {
+    padding: 46px 20px 67px;
+
+    @media (min-width: $tablet-width) {
+      padding: 54px 0 43px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 72px 0 67px;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 38px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+      }
+    }
   }
 }

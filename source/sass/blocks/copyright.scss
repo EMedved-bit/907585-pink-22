@@ -6,6 +6,10 @@
 .copyright__text {
   margin: 0;
   margin-right: 15px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 13px;
+  }
 }
 
 .copyright__link {

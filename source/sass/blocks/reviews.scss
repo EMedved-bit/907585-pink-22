@@ -1,10 +1,41 @@
 .reviews {
   padding: 50px 20px 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 85px 20px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 72px 250px 80px;
+
+    &::before {
+      content: "";
+      background-image: url("../img/icons/quotes.svg");
+      display: block;
+      width: 79px;
+      height: 63px;
+      margin: 0 auto;
+      margin-bottom: 52px;
+    }
+  }
 }
 
 .reviews__item {
   margin: 0;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .reviews__author-name {
@@ -15,13 +46,82 @@
   color: $black;
   display: block;
   margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+
+.reviews__author-desc {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: $dark-grey;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .reviews__text {
   margin: 0;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 41px;
+  }
 }
 
 .reviews__toogles {
-  margin-top: 44px;
+  margin-top: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.reviews__button {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    border: none;
+    background: none;
+    padding: 0;
+    position: absolute;
+    width: 22px;
+    height: 41px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--prev {
+    background-image: url("../img/icons/reviews-prev.svg");
+    left: 130px;
+  }
+
+  &--next {
+    background-image: url("../img/icons/reviews-next.svg");
+    right: 130px;
+  }
 }
