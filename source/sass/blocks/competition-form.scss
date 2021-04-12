@@ -1,10 +1,90 @@
+.competition-form__form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 89px 130px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 70px;
+    column-gap: 65px;
+  }
+}
+
 .competition-form__section {
   padding: 42px 20px 44px;
   margin: 0;
   border: none;
+  order: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 0 20px;
+    border: 2px solid $border;
+    border-radius: 1px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin: 0;
+  }
+
+  &:first-child {
+    @media (min-width: $tablet-width) {
+      border: none;
+      padding: 0;
+    }
+  }
 
   &:nth-child(2n) {
     background-color: $light-grey;
+
+    @media (min-width: $tablet-width) {
+      background: none;
+    }
+  }
+
+  &:nth-child(4) {
+    @media (min-width: $tablet-width) {
+      order: 2;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: $tablet-width) {
+      order: 3;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $tablet-width) {
+      order: 4;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &:nth-child(5) {
+    @media (min-width: $tablet-width) {
+      order: 5;
+      padding: 47px 60px 53px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1/-1;
+      padding: 42px 60px 43px;
+    }
   }
 }
 
@@ -12,13 +92,75 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  &--contacts {
+    @media (min-width: $tablet-width) {
+      padding: 46px 40px 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 65px;
+      padding-bottom: 23px;
+    }
+  }
 }
 
 .competition-form__fields-item {
   margin-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--bottom-label {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+
+    .competition-form__label {
+      @media (min-width: $tablet-width) {
+        padding-left: 18px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &--icon-phone::after,
+  &--icon-email::after {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $border;
+      width: 59px;
+      height: 59px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &--icon-phone::after {
+    background-image: url("../img/icons/phone-icon.svg");
+  }
+
+  &--icon-email::after {
+    background-image: url("../img/icons/mail-icon.svg");
   }
 }
 
@@ -27,6 +169,11 @@
   text-transform: uppercase;
   color: $red;
   padding-left: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 22px;
+  }
 }
 
 .competition-form__input {
@@ -40,6 +187,10 @@
   padding: 0 20px;
   margin-top: 13px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+
   &::placeholder {
     font-size: 18px;
     color: $dark-grey;
@@ -49,11 +200,30 @@
 .competition-form__name {
   margin: 0;
   font-weight: inherit;
+  font-size: 14px;
   line-height: 18px;
   color: $red;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background-color: $white;
+    padding: 0 25px;
+  }
+
+  &--mobile-hidden {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
 
   &--comment {
     margin-bottom: 20px;
@@ -64,11 +234,39 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 54px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px;
+  }
+
+  &--checkbox {
+    @media (min-width: $desktop-width) {
+      padding: 54px 40px 7px;
+      height: 228px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .competition-form__filters-item {
+      @media (min-width: $desktop-width) {
+        margin-bottom: 47px;
+      }
+    }
+  }
 }
 
 .competition-form__filters-item {
   font-size: 18px;
   margin-bottom: 47px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 39px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -147,6 +345,10 @@
   height: 197px;
   resize: none;
 
+  @media (min-width: $desktop-width) {
+    height: 124px;
+  }
+
   &::placeholder {
     font-size: 18px;
     line-height: 30px;
@@ -159,11 +361,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    order: 6;
+    padding: 68px 20px 52px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/-1;
+    padding: 0;
+  }
 }
 
 .competition-form__footnote {
   text-transform: uppercase;
   margin-top: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  &--long {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
 
   &::before {
     content: "*";

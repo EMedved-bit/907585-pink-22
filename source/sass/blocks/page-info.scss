@@ -1,6 +1,10 @@
 .page-info {
   padding: 48px 20px 0;
 
+  @media (min-width: $tablet-width) {
+    padding: 94px 20px 6px;
+  }
+
   &--bottom {
     padding-bottom: 44px;
   }
@@ -10,4 +14,22 @@
   margin: 0;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    width: 490px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 756px;
+  }
+}
+
+.page-info__text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
 }
