@@ -1,7 +1,17 @@
 .main-header {
   width: 100%;
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/background-mobile.jpg");
   padding: 98px 20px 47px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/background-tablet.jpg");
+    padding: 182px 20px 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/background-desktop.jpg");
+    padding: 175px 20px 95px;
+  }
 }
 
 .main-header__title {
@@ -11,4 +21,14 @@
   line-height: 33px;
   color: $white;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 747px;
+    margin: 0 auto;
+  }
 }
