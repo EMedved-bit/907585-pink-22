@@ -1,5 +1,6 @@
 .gallery {
   padding: 52px 20px 0;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -63,13 +64,8 @@
   display: block;
 
   &--wide {
-    margin-left: -20px;
-    margin-right: -20px;
-
-    @media (min-width: $desktop-width) {
-      margin-left: -130px;
-      margin-right: -130px;
-    }
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
   }
 }
 
