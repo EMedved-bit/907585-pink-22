@@ -1,14 +1,18 @@
 .main-header {
   width: 100%;
+  min-height: 237px;
   background-image: url("../img/background-mobile.jpg");
+  background-size: cover;
   padding: 98px 20px 47px;
 
   @media (min-width: $tablet-width) {
+    min-height: 440px;
     background-image: url("../img/background-tablet.jpg");
     padding: 182px 20px 65px;
   }
 
   @media (min-width: $desktop-width) {
+    min-height: 394px;
     background-image: url("../img/background-desktop.jpg");
     padding: 175px 20px 95px;
   }

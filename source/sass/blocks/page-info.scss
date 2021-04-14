@@ -2,11 +2,19 @@
   padding: 48px 20px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 94px 20px 6px;
+    padding: 94px 0 6px;
   }
 
   &--bottom {
     padding-bottom: 44px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 41px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 61px 0 69px;
+    }
   }
 }
 
@@ -23,6 +31,14 @@
 
   @media (min-width: $desktop-width) {
     width: 756px;
+  }
+
+  &--short-line {
+    padding: 0 14px;
+
+    @media (min-width: $desktop-width) {
+      width: 642px;
+    }
   }
 }
 
