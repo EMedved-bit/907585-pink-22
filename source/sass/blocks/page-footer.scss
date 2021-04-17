@@ -15,6 +15,22 @@
   }
 }
 
+.page-footer__logo {
+  @media (min-width: $desktop-width) {
+    &:hover path {
+      fill: $red;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .symbol {
+      fill: $dark-grey;
+    }
+  }
+}
+
 .page-footer__social {
   margin: 38px 0;
 

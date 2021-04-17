@@ -92,6 +92,18 @@
   color: $red;
   line-height: 33px;
   display: block;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: $dark-grey;
+      text-decoration: underline;
+    }
+  }
+
+  &:active {
+    color: rgba($dark-grey, 0.3);
+    text-decoration: none;
+  }
 }
 
 .contacts__map {

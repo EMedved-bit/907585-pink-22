@@ -45,6 +45,18 @@
   text-decoration: none;
   background-color: transparent;
 
+  @media (min-width: $desktop-width) {
+    &:hover {
+      background-color: $white;
+      color: $red;
+    }
+  }
+
+  &:active {
+    background-color: $white;
+    color: rgba($red, 0.3);
+  }
+
   &--red {
     border-color: $red;
     color: $red;
@@ -72,6 +84,16 @@
   background-color: rgba($dark-grey, 0.3);
   border-radius: 50%;
   font-size: 0;
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      background-color: rgba($dark-grey, 0.6);
+    }
+  }
+
+  &:active {
+    background-color: rgba($dark-grey, 0.1);
+  }
 
   &--current {
     background-color: $white;

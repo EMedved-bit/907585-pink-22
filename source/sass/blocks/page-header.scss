@@ -4,6 +4,23 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+
+  @media (max-width: $hidden-menu-width) {
+    &--menu-opened,
+    &--nojs {
+      background-color: $dark-grey;
+      border-bottom: 1px solid $black;
+
+      .page-header__wrapper {
+        height: 68px;
+
+        @media (min-width: $tablet-width) {
+          height: 109px;
+        }
+      }
+    }
+  }
 }
 
 .page-header__wrapper {
@@ -12,6 +29,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     height: 110px;
@@ -19,5 +37,24 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 130px;
+    width: 1200px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+
+  @media (min-width: $desktop-width) {
+    &:hover path {
+      fill: $red;
+    }
+  }
+
+  &:active path {
+    fill: rgba($white, 0.3);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 10px;
   }
 }
