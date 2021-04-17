@@ -1,5 +1,49 @@
 .header-nav {
   display: flex;
+
+  @media (max-width: $hidden-menu-width) {
+    &--closed {
+      .header-nav__list {
+        display: none;
+      }
+    }
+
+    &--opened {
+      .header-nav__toogle {
+        background: none;
+        width: 35px;
+
+        &::before,
+        &::after {
+          width: 35px;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 0;
+        }
+
+        &:active {
+          background: none;
+        }
+      }
+    }
+
+    &--nojs {
+      .header-nav__toogle {
+        display: none;
+      }
+
+      .header-nav__list {
+        display: block;
+      }
+    }
+  }
 }
 
 .header-nav__toogle {
@@ -30,6 +74,16 @@
     bottom: -10px;
   }
 
+  &:focus {
+    outline: none;
+  }
+
+  &:active,
+  &:active::before,
+  &:active::after {
+    background-color: rgba($red, 0.3);
+  }
+
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -41,9 +95,8 @@
   padding: 0;
   width: 100%;
   position: absolute;
-  top: 66px;
+  top: 69px;
   left: 0;
-  display: none;
 
   @media (min-width: $tablet-width) {
     top: 110px;
@@ -58,27 +111,55 @@
 .header-nav__item {
   @media (min-width: $desktop-width) {
     margin-left: 78px;
+    position: relative;
+
+    &--current {
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        position: absolute;
+        left: 0;
+        bottom: -13px;
+      }
+    }
   }
 
   a {
     text-decoration: none;
     display: block;
     width: 100%;
-    padding: 25px 0;
+    padding: 18px 0;
     text-align: center;
     font-weight: 700;
     font-size: 18px;
     color: $white;
     text-transform: uppercase;
     background-color: $dark-grey;
-    box-shadow: 0 1px 0 $black, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid $black;
+    border-top: 1px solid rgba($white, 0.15);
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+
+    &:active {
+      color: rgba($red, 0.3);
+    }
 
     @media (min-width: $desktop-width) {
       background: none;
+      border: none;
       font-weight: 400;
       text-transform: none;
       box-shadow: none;
       padding: 0;
+
+      &:active {
+        color: rgba($white, 0.3);
+      }
     }
   }
 }

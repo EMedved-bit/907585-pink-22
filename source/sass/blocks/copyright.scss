@@ -14,4 +14,14 @@
 
 .copyright__link {
   display: flex;
+
+  @media (min-width: $desktop-width) {
+    &:hover path {
+      fill: $dark-grey;
+    }
+  }
+
+  &:active path {
+    fill: rgba($dark-grey, 0.3);
+  }
 }

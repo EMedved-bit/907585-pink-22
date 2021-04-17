@@ -29,6 +29,17 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-width: $desktop-width) {
+    &:hover {
+      border-color: $dark-grey;
+    }
+  }
+
+  &:active {
+    border-color: rgba($dark-grey, 0.4);
+    opacity: 0.3;
+  }
+
   &--twitter {
     background-image: url("../img/icons/twitter.svg");
     background-size: 18px 14px;
