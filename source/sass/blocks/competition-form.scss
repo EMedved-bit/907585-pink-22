@@ -191,6 +191,16 @@
     margin-top: 0;
   }
 
+  @media (min-width: $desktop-width) {
+    &:hover {
+      border-color: $dark-grey;
+    }
+  }
+
+  &:focus {
+    border-color: $red;
+  }
+
   &::placeholder {
     font-size: 18px;
     color: $dark-grey;
@@ -290,6 +300,17 @@
     border-radius: 1px;
     margin-right: 22px;
   }
+
+  @media (min-width: $desktop-width) {
+    &:hover::before,
+    &:focus::before {
+      border-color: $dark-grey;
+    }
+  }
+
+  &:active::before {
+    border-color: $red;
+  }
 }
 
 .competition-form__filter:checked + .competition-form__checkbox-label::after {
@@ -301,6 +322,10 @@
   top: 50%;
   transform: translateY(-50%);
   left: 7px;
+}
+
+.competition-form__filter:focus + .competition-form__checkbox-label::before {
+  border-color: $dark-grey;
 }
 
 .competition-form__radio-label {
@@ -320,6 +345,16 @@
     border-radius: 50%;
     margin-right: 31px;
   }
+
+  @media (min-width: $desktop-width) {
+    &:hover::before {
+      border-color: $dark-grey;
+    }
+  }
+
+  &:active::before {
+    border-color: $red;
+  }
 }
 
 .competition-form__filter:checked + .competition-form__radio-label::after {
@@ -332,6 +367,10 @@
   top: 50%;
   transform: translateY(-50%);
   left: 10.5px;
+}
+
+.competition-form__filter:focus + .competition-form__radio-label::before {
+  border-color: $dark-grey;
 }
 
 .competition-form__comment {
@@ -347,6 +386,14 @@
 
   @media (min-width: $desktop-width) {
     height: 124px;
+
+    &:hover {
+      border-color: $dark-grey;
+    }
+  }
+
+  &:focus {
+    border-color: $red;
   }
 
   &::placeholder {
