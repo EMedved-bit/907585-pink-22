@@ -10,4 +10,23 @@
   font-size: 18px;
   text-transform: uppercase;
   color: $white;
+
+  @media (min-width: $desktop-width) {
+    &:hover,
+    &:focus {
+      background-color: $dark-green;
+      border-color: $dark-green;
+    }
+  }
+
+  &:active {
+    background-color: $dark-green;
+    border-color: $dark-green;
+    color: rgba($white, 0.3);
+  }
+
+  &:disabled {
+    background-color: $border;
+    border-color: $border;
+  }
 }

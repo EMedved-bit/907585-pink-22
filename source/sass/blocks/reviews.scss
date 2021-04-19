@@ -113,6 +113,15 @@
     height: 41px;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   &--prev {
