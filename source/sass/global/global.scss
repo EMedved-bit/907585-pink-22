@@ -60,11 +60,38 @@
   &--red {
     border-color: $red;
     color: $red;
+
+    @media (min-width: $desktop-width) {
+      &:hover {
+        background-color: $red;
+        color: $white;
+      }
+    }
+
+    &:active {
+      background-color: $red;
+      color: rgba($white, 0.3);
+    }
   }
 
-  &--disabled {
+  &--grey {
+    background-color: transparent;
     border-color: rgba($dark-grey, 0.1);
     color: rgba($dark-grey, 0.1);
+
+    @media (min-width: $desktop-width) {
+      &:hover {
+        background-color: transparent;
+        border-color: rgba($dark-grey, 0.3);
+        color: rgba($dark-grey, 0.3);
+      }
+    }
+
+    &:active {
+      background-color: rgba($dark-grey, 0.3);
+      border: none;
+      color: rgba($white, 0.3);
+    }
   }
 }
 

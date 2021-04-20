@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header--nojs">
       <div class="page-wrapper page-header__wrapper">
         <a class="page-header__logo" href="index.html" Логотип приложения Pink">
           <svg class="logo-mobile" width="74" height="23" viewBox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +38,7 @@
             <path d="M10.7851 33.6407C10.0561 33.6355 9.35868 33.3471 8.84503 32.8384C8.33138 32.3298 8.04314 31.6421 8.04316 30.9253C8.04316 31.6438 7.75354 32.333 7.23772 32.8419C6.7219 33.3508 6.02194 33.6381 5.29114 33.6407C6.02194 33.6433 6.7219 33.9305 7.23772 34.4395C7.75354 34.9484 8.04316 35.6376 8.04316 36.356C8.04314 35.6393 8.33138 34.9516 8.84503 34.4429C9.35868 33.9343 10.0561 33.6459 10.7851 33.6407Z" fill="#D22856"/>
           </svg>
         </a>
-        <nav class="header-nav">
+        <nav class="header-nav header-nav--closed header-nav--nojs">
           <button class="header-nav__toogle" type="button" aria-label="Открыть меню"></button>
           <ul class="header-nav__list">
             <li class="header-nav__item">
@@ -233,7 +235,7 @@
             </ul>
             <div class="user-photo__post-buttons">
               <button class="main-button main-button--red user-photo__button" type="submit">Запостить</button>
-              <button class="main-button main-button--red main-button--disabled user-photo__button" type="reset">Отмена</button>
+              <button class="main-button main-button--grey user-photo__button" type="reset">Отмена</button>
             </div>
           </form>
         </div>
@@ -286,5 +288,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
+
   </body>
 </html>

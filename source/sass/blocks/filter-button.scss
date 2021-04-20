@@ -8,7 +8,7 @@
   background-color: transparent;
 
   path {
-    fill: $dark-grey;
+    fill: rgba($dark-grey, 0.3);
   }
 
   &--active path {
