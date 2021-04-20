@@ -186,6 +186,9 @@
   height: 59px;
   padding: 0 20px;
   margin-top: 13px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
