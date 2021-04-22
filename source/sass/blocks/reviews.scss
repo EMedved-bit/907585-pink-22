@@ -1,5 +1,5 @@
 .reviews {
-  padding: 50px 20px 60px;
+  padding: 50px 20px 40px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -10,11 +10,11 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 85px 20px 45px;
+    padding: 85px 20px 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 72px 250px 80px;
+    padding: 72px 250px 20px;
 
     &::before {
       content: "";

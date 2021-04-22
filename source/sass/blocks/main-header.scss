@@ -5,16 +5,28 @@
   background-size: cover;
   padding: 98px 20px 47px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 440px;
     background-image: url("../img/background-tablet.jpg");
     padding: 182px 20px 65px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 394px;
     background-image: url("../img/background-desktop.jpg");
     padding: 175px 20px 95px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-desktop@2x.jpg");
+    }
   }
 }
 
