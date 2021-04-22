@@ -17,6 +17,10 @@
     height: 277px;
     background-size: cover;
     margin: 0 auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/features-image@2x.png");
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -29,6 +33,10 @@
       position: absolute;
       bottom: 0;
       left: 20px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/features-tablet@2x.png");
+      }
     }
   }
 
@@ -60,18 +68,31 @@
       height: 302px;
       display: block;
       margin-bottom: 59px;
+      background-size: cover;
     }
 
     &--first::before {
       background-image: url("../img/features-desktop1.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/features-desktop1@2x.png");
+      }
     }
 
     &--second::before {
       background-image: url("../img/features-desktop2.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/features-desktop2@2x.png");
+      }
     }
 
     &--third::before {
       background-image: url("../img/features-desktop3.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/features-desktop3@2x.png");
+      }
     }
   }
 }
