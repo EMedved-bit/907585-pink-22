@@ -1,5 +1,5 @@
 .contacts__wrapper {
-  padding: 47px 20px 41px;
+  padding: 47px 20px 34px;
 
   @media (min-width: $tablet-width) {
     padding: 51px 20px 30px;
@@ -107,8 +107,52 @@
 }
 
 .contacts__map {
-  img {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-image: url("../img/map@1x.png");
+  background-size: cover;
+  background-color: $light-grey;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 374px;
+    background-image: url("../img/map-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 502px;
+    background-image: url("../img/map-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 32px;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    z-index: 1;
+
+    @media (min-width: $tablet-width) {
+      height: 67px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 100px;
+    }
   }
 }
