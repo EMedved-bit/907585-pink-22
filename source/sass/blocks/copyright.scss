@@ -15,13 +15,17 @@
 .copyright__link {
   display: flex;
 
+  svg {
+    fill: $red;
+  }
+
   @media (min-width: $desktop-width) {
-    &:hover path {
+    &:hover svg {
       fill: $dark-grey;
     }
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba($dark-grey, 0.3);
   }
 }

@@ -17,7 +17,7 @@
 
 .page-footer__logo {
   @media (min-width: $desktop-width) {
-    &:hover path {
+    &:hover svg {
       fill: $red;
     }
   }
@@ -25,7 +25,7 @@
   &:active {
     opacity: 0.3;
 
-    .symbol {
+    svg {
       fill: $dark-grey;
     }
   }

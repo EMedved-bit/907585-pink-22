@@ -44,13 +44,17 @@
 .page-header__logo {
   display: flex;
 
+  svg {
+    fill: $white;
+  }
+
   @media (min-width: $desktop-width) {
-    &:hover path {
+    &:hover svg {
       fill: $red;
     }
   }
 
-  &:active path {
+  &:active svg {
     fill: rgba($white, 0.3);
   }
 
