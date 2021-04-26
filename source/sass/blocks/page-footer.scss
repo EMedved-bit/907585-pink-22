@@ -5,7 +5,7 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 36px 20px 51px;
+    padding: 34px 20px 51px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -16,7 +16,13 @@
 }
 
 .page-footer__logo {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-bottom: 11px;
+
     &:hover svg {
       fill: $red;
     }
@@ -32,9 +38,15 @@
 }
 
 .page-footer__social {
-  margin: 38px 0;
+  margin: 32px 0;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-right: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -6px;
   }
 }

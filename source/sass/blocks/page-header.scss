@@ -48,7 +48,13 @@
     fill: $white;
   }
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
   @media (min-width: $desktop-width) {
+    padding-bottom: 3px;
+
     &:hover svg {
       fill: $red;
     }
@@ -56,9 +62,5 @@
 
   &:active svg {
     fill: rgba($white, 0.3);
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 10px;
   }
 }
