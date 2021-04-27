@@ -1,6 +1,6 @@
 .form-button {
   width: 280px;
-  height: 59px;
+  height: 62px;
   background-color: $green;
   padding: 0;
   border: 2px solid $green;
@@ -10,6 +10,10 @@
   font-size: 18px;
   text-transform: uppercase;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 299px;
+  }
 
   @media (min-width: $desktop-width) {
     &:hover,

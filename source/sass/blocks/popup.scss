@@ -1,5 +1,5 @@
 .popup {
-  padding: 44px 0 50px;
+  padding: 57px 0 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@
   font-size: 18px;
   color: $black;
   text-align: center;
-  margin-bottom: 29px;
+  margin-bottom: 24px;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
@@ -62,7 +62,7 @@
 .popup__text {
   margin: 0;
   text-align: center;
-  margin-bottom: 43px;
+  margin-bottom: 35px;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {

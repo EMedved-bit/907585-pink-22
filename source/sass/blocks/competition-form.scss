@@ -5,16 +5,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 89px 130px 0;
+    padding: 76px 130px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 70px;
-    column-gap: 65px;
+    row-gap: 64px;
+    column-gap: 70px;
   }
 }
 
 .competition-form__section {
-  padding: 42px 20px 44px;
+  padding: 38px 20px 44px;
   margin: 0;
   border: none;
   order: 1;
@@ -39,6 +39,10 @@
       border: none;
       padding: 0;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 7px;
+    }
   }
 
   &:nth-child(2n) {
@@ -50,40 +54,60 @@
   }
 
   &:nth-child(4) {
+    padding-bottom: 41px;
+
     @media (min-width: $tablet-width) {
+      margin-top: 68px;
+      padding-bottom: 3px;
       order: 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+      padding-bottom: 1px;
     }
   }
 
   &:nth-child(3) {
+    padding-top: 33px;
+
     @media (min-width: $tablet-width) {
+      margin-top: 67px;
+      padding-top: 0;
       order: 3;
     }
 
     @media (min-width: $desktop-width) {
+      margin-top: 0;
       grid-column: 1/-1;
     }
   }
 
   &:nth-child(2) {
     @media (min-width: $tablet-width) {
+      margin-top: 67px;
       order: 4;
     }
 
     @media (min-width: $desktop-width) {
       grid-column: 1/-1;
+      margin-top: 0;
     }
   }
 
   &:nth-child(5) {
+    padding-bottom: 39px;
+
     @media (min-width: $tablet-width) {
+      margin-top: 66px;
       order: 5;
-      padding: 47px 60px 53px;
+      padding: 45px 58px 44px;
     }
 
     @media (min-width: $desktop-width) {
+      margin-top: 2px;
       grid-column: 1/-1;
-      padding: 42px 60px 43px;
+      padding: 42px 58px 38px;
     }
   }
 }
@@ -95,26 +119,30 @@
 
   &--contacts {
     @media (min-width: $tablet-width) {
-      padding: 46px 40px 37px;
+      padding: 43px 38px 33px;
     }
 
     @media (min-width: $desktop-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 65px;
-      padding-bottom: 23px;
+      column-gap: 70px;
+      padding-bottom: 19px;
     }
   }
 }
 
 .competition-form__fields-item {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 54px;
     position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
   }
 
   &:last-child {
@@ -125,14 +153,18 @@
     flex-direction: column-reverse;
     align-items: flex-start;
 
+    @media (min-width: $tablet-width) {
+      margin-bottom: 37px;
+    }
+
     @media (min-width: $desktop-width) {
       margin-bottom: 0;
     }
 
     .competition-form__label {
       @media (min-width: $tablet-width) {
-        padding-left: 18px;
-        margin-top: 20px;
+        padding-left: 19px;
+        margin-top: 17px;
       }
     }
   }
@@ -147,8 +179,8 @@
       background-repeat: no-repeat;
       background-position: center;
       background-color: $border;
-      width: 59px;
-      height: 59px;
+      width: 62px;
+      height: 62px;
       position: absolute;
       right: 0;
       top: 0;
@@ -172,7 +204,7 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
-    padding-right: 22px;
+    padding-right: 19px;
   }
 }
 
@@ -183,9 +215,9 @@
   border: 2px solid $border;
   border-radius: 1px;
   width: 100%;
-  height: 59px;
+  height: 61px;
   padding: 0 20px;
-  margin-top: 13px;
+  margin-top: 10px;
   position: relative;
   z-index: 1;
   background: transparent;
@@ -218,7 +250,8 @@
   color: $red;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
+  padding: 0 15px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -239,7 +272,11 @@
   }
 
   &--comment {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+  }
+
+  &--radio {
+    margin-bottom: 36px;
   }
 }
 
@@ -249,7 +286,7 @@
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    padding: 54px 40px;
+    padding: 51px 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -257,17 +294,34 @@
   }
 
   &--checkbox {
+    @media (min-width: $tablet-width) {
+      padding-top: 52px;
+      padding-bottom: 50px;
+    }
+
     @media (min-width: $desktop-width) {
-      padding: 54px 40px 7px;
-      height: 228px;
+      padding: 54px 40px 6px;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
     }
 
     .competition-form__filters-item {
       @media (min-width: $desktop-width) {
         margin-bottom: 47px;
+        padding-right: 20px;
+
+        &:nth-child(3n) {
+          width: 210px;
+          padding-right: 0;
+        }
+
+        &:nth-child(3n+1) {
+          width: 313px;
+        }
+
+        &:nth-child(3n-1) {
+          width: 293px;
+        }
       }
     }
   }
@@ -275,7 +329,7 @@
 
 .competition-form__filters-item {
   font-size: 18px;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 39px;
@@ -283,6 +337,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--radio {
+    margin-bottom: 36px;
   }
 }
 
@@ -295,9 +353,9 @@
 
   &::before {
     content: "";
-    width: 35px;
-    height: 35px;
-    min-width: 35px;
+    width: 37px;
+    height: 37px;
+    min-width: 37px;
     background-color: $white;
     border: 2px solid $border;
     border-radius: 1px;
@@ -340,13 +398,17 @@
 
   &::before {
     content: "";
-    width: 37px;
-    height: 37px;
-    min-width: 37px;
+    width: 39px;
+    height: 39px;
+    min-width: 39px;
     background-color: $white;
     border: 2px solid $border;
     border-radius: 50%;
     margin-right: 31px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -384,11 +446,15 @@
   border-radius: 1px;
   padding: 15px 20px;
   width: 100%;
-  height: 197px;
+  height: 199px;
   resize: none;
 
+  @media (min-width: $tablet-width) {
+    height: 193px;
+  }
+
   @media (min-width: $desktop-width) {
-    height: 124px;
+    height: 127px;
 
     &:hover {
       border-color: $dark-grey;
@@ -407,14 +473,14 @@
 }
 
 .competition-form__footer {
-  padding: 4px 20px 26px;
+  padding: 4px 20px 19px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     order: 6;
-    padding: 68px 20px 52px;
+    padding: 67px 20px 50px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -427,7 +493,7 @@
 
 .competition-form__footnote {
   text-transform: uppercase;
-  margin-top: 39px;
+  margin-top: 38px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
