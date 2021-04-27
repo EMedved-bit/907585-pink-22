@@ -3,10 +3,11 @@
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social__item {
-  margin-right: 14px;
+  margin-right: 9px;
 
   @media (min-width: $desktop-width) {
     margin-right: 7px;

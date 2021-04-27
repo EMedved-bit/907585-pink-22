@@ -22,18 +22,20 @@
   }
 
   &--features {
-    padding: 46px 20px 30px;
+    padding: 42px 20px 30px;
 
     @media (min-width: $tablet-width) {
-      padding: 54px 0 40px;
+      padding: 48px 0 30px;
+      line-height: 54px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 72px 0 66px;
+      padding: 64px 0 54px;
+      line-height: 1.35;
     }
 
     p:not(:last-child) {
-      margin-bottom: 38px;
+      margin-bottom: 29px;
 
       @media (min-width: $tablet-width) {
         margin-bottom: 0;

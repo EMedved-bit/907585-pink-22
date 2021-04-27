@@ -1,8 +1,12 @@
 .price-table {
+  position: relative;
+  left: -260px;
   border-collapse: collapse;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
+    position: static;
+    width: 100%;
   }
 
   th:first-child,
@@ -17,23 +21,50 @@
 
 .price-table__rate {
   background-color: $dark-grey;
+  vertical-align: top;
+  padding-top: 19px;
   text-align: center;
   color: $white;
   text-transform: uppercase;
   width: 280px;
   min-width: 280px;
-  height: 94px;
+  height: 98px;
   border-right: 2px solid $light-grey;
+  position: relative;
+
+  &--hit::before {
+    content: "";
+    width: 74px;
+    height: 74px;
+    background-image: url("../img/table-hit.svg");
+    position: absolute;
+    top: 0;
+    left: -2px;
+  }
 
   @media (min-width: $tablet-width) {
     min-width: 0;
     width: auto;
     height: 79px;
+    padding-top: 20px;
+
+    &--hit::before {
+      background-size: contain;
+      width: 60px;
+      height: 60px;
+      left: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
     height: 98px;
+    padding-top: 23px;
+
+    &--hit::before {
+      width: 74px;
+      height: 74px;
+    }
   }
 
   &:last-child {
@@ -52,6 +83,10 @@
   line-height: 1;
   margin-bottom: 9px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 18px;
     margin-bottom: 12px;
@@ -69,20 +104,20 @@
 
 .price-table__cell {
   background-color: $white;
-  height: 59px;
+  height: 61px;
   border-right: 2px solid $border;
   border-bottom: 2px solid $border;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
     width: 153px;
-    height: 45px;
+    height: 46px;
     padding: 0 15px;
   }
 
   @media (min-width: $desktop-width) {
     width: 234px;
-    height: 59px;
+    height: 61px;
     font-size: 18px;
     padding: 0 20px;
   }

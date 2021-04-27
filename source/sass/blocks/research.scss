@@ -14,7 +14,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 99px 20px 50px 330px;
+    padding: 97px 20px 50px 330px;
 
     &::before {
       content: "";
@@ -23,19 +23,19 @@
       height: 276px;
       background-size: contain;
       position: absolute;
-      bottom: 30px;
+      bottom: 28px;
       left: 20px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 115px 166px 120px 500px;
+    padding: 72px 166px 115px 500px;
 
     &::before {
       background-image: url("../img/research-image.svg");
       width: 298px;
       height: 345px;
-      bottom: 67px;
+      bottom: 70px;
       left: 131px;
     }
   }
@@ -43,7 +43,7 @@
 
 .research__slogan {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -53,7 +53,7 @@
 
   @media (min-width: $desktop-width) {
     line-height: 30px;
-    margin-bottom: 37px;
+    margin-bottom: 26px;
     padding-right: 0;
   }
 }
@@ -61,7 +61,7 @@
 .research__intro {
   margin: 0;
   padding-right: 2px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 
   @media (min-width: $desktop-width) {
     font-size: 18px;

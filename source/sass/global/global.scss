@@ -46,6 +46,8 @@
   background-color: transparent;
 
   @media (min-width: $desktop-width) {
+    font-size: 21px;
+
     &:hover {
       background-color: $white;
       color: $red;
@@ -124,8 +126,7 @@
 
   &--current {
     background-color: $white;
-    border: 3px solid $dark-grey;
-    box-sizing: content-box;
+    box-shadow: 0 0 0 3px $dark-grey;
   }
 }
 
