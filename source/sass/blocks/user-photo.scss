@@ -9,12 +9,13 @@
 
   @media (min-width: $desktop-width) {
     background-color: $white;
+    padding-bottom: 28px;
   }
 }
 
 .user-photo__wrapper {
   @media (min-width: $tablet-width) {
-    padding: 57px 20px 54px;
+    padding: 58px 20px 56px;
     display: grid;
     grid-template-columns: 300px 1fr;
     column-gap: 45px;
@@ -35,6 +36,10 @@
     margin-bottom: 0;
   }
 
+  picture {
+    display: flex;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -47,10 +52,16 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
-  width: 194px;
+  width: 211px;
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.user-photo__buttons-item {
+  &:last-child {
+    margin-right: 4px;
   }
 }
 
@@ -62,10 +73,14 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -2px;
+  }
 }
 
 .user-photo__controls-item {
-  padding: 36px 20px 34px;
+  padding: 32px 39px 34px;
   border-bottom: 1px solid rgba($dark-grey, 0.1);
   display: none;
 
@@ -74,7 +89,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 26px 18px 24px 0;
+    padding: 26px 24px 24px 0;
     display: flex;
     align-items: center;
   }
@@ -94,8 +109,13 @@
   }
 
   &:last-child {
+    @media (min-width: $tablet-width) {
+      padding-top: 23px;
+    }
+
     @media (min-width: $desktop-width) {
       border: none;
+      padding-top: 10px;
     }
   }
 
@@ -109,12 +129,15 @@
       height: 22px;
       background-repeat: no-repeat;
       margin-right: 29px;
+      margin-left: 5px;
+      background-position: center;
     }
 
     @media (min-width: $desktop-width) {
       width: 48px;
       height: 44px;
-      margin-right: 48px;
+      margin-right: 43px;
+      margin-left: 0;
     }
   }
 
@@ -151,6 +174,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 67px;
+    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -164,6 +188,7 @@
   margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
+    width: 260px;
     margin-bottom: 24px;
   }
 
