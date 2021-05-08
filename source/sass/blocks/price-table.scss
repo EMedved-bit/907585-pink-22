@@ -150,8 +150,11 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    font-size: 0;
     justify-content: center;
+
+    span {
+      display: none;
+    }
   }
 
   &--yes::after {

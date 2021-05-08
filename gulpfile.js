@@ -76,6 +76,7 @@ exports.images = copyImages;
 
 const copy = (done) => {
   gulp.src([
+    "source/js/*.js",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
