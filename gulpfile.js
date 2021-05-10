@@ -23,6 +23,7 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -43,6 +44,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
+    .pipe(gulp.dest("build/js"))
     .pipe(terser())
     .pipe(rename({extname: ".min.js"}))
     .pipe(gulp.dest("build/js"))
@@ -76,7 +78,6 @@ exports.images = copyImages;
 
 const copy = (done) => {
   gulp.src([
-    "source/js/*.js",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
