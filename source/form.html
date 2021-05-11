@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link href="css/style.min.css" rel="stylesheet">
@@ -11,7 +14,7 @@
   <body class="page__body">
     <header class="page-header page-header--nojs">
       <div class="page-wrapper page-header__wrapper">
-        <a class="page-header__logo" aria-label="Логотип приложения Pink">
+        <a class="page-header__logo" href="index.html" aria-label="Логотип приложения Pink">
           <svg class="logo-mobile" width="74" height="23">
             <use xlink:href="img/sprite.svg#icon-logo-mobile"></use>
           </svg>
@@ -42,7 +45,7 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="main-header">
+      <section class="main-header main-header--nojs">
         <h1 class="main-header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </section>
       <div class="page-info">
@@ -53,7 +56,7 @@
           </p>
         </div>
       </div>
-      <section class="сompetition-form">
+      <section class="competition-form">
         <h2 class="visually-hidden">Форма заявки для участия в конкурсе</h2>
         <div class="page-wrapper">
           <form class="competition-form__form" action="https://echo.htmlacademy.ru" method="GET">
@@ -147,7 +150,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-wrapper page-footer__wrapper">
-        <a class="page-footer__logo" aria-label="Логотип приложения Pink">
+        <a class="page-footer__logo" href="index.html" aria-label="Логотип приложения Pink">
           <svg class="logo-pink" width="145" height="40">
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>

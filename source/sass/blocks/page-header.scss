@@ -7,8 +7,7 @@
   z-index: 1;
 
   @media (max-width: $hidden-menu-width) {
-    &--menu-opened,
-    &--nojs {
+    &--menu-opened {
       background-color: $dark-grey;
       border-bottom: 1px solid $black;
 
@@ -17,6 +16,28 @@
 
         @media (min-width: $tablet-width) {
           height: 109px;
+        }
+      }
+    }
+
+    &--nojs {
+      background-color: $dark-grey;
+      position: static;
+
+      .page-header__wrapper {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        padding: 0;
+      }
+
+      .page-header__logo {
+        padding: 23px 20px;
+        border-bottom: 1px solid $black;
+
+        @media (min-width: $tablet-width) {
+          margin-bottom: 0;
         }
       }
     }

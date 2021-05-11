@@ -10,6 +10,7 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 64px;
     column-gap: 70px;
+    align-items: start;
   }
 }
 
@@ -431,7 +432,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 10.5px;
+  left: 11.6px;
 }
 
 .competition-form__filter:focus + .competition-form__radio-label::before {

@@ -20,7 +20,10 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
       csso()
     ]))
     .pipe(rename("style.min.css"))
@@ -43,6 +46,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
+    .pipe(gulp.dest("build/js"))
     .pipe(terser())
     .pipe(rename({extname: ".min.js"}))
     .pipe(gulp.dest("build/js"))
