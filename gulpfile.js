@@ -20,10 +20,12 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),
-      csso()
+      autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
+      csso()
+    ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
