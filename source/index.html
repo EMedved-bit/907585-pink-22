@@ -12,7 +12,8 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <header class="page-header page-header--nojs">
+    <!-- Для открытия меню необходимо поставить page-header--menu-opened -->
+    <header class="page-header page-header--nojs" >
       <div class="page-wrapper page-header__wrapper">
         <a class="page-header__logo" aria-label="Логотип приложения Pink">
           <svg class="logo-mobile" width="74" height="23">
@@ -25,6 +26,7 @@
             <use xlink:href="img/sprite.svg#icon-logo-desktop"></use>
           </svg>
         </a>
+        <!-- Для открытия меню необходимо поставить header-nav--opened -->
         <nav class="header-nav header-nav--closed header-nav--nojs">
           <button class="header-nav__toogle" type="button" aria-label="Открыть меню"></button>
           <ul class="header-nav__list">
